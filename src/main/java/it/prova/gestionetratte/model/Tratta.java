@@ -38,9 +38,6 @@ public class Tratta {
 
 	@Column(name = "oraatterraggio")
 	private LocalTime oraAtterraggio;
-
-	@Column(name = "minutidurata")
-	private Integer minutiDurata;
 	
 	@Column(name = "stato")
 	@Enumerated(EnumType.STRING)
@@ -57,51 +54,43 @@ public class Tratta {
 		this.id = id;
 	}
 
-	public Tratta(Long id, String codice, String descrizione, Date data, LocalTime oraDecollo, LocalTime oraAtterraggio,
-			Integer minutiDurata, Stato stato, Airbus airbus) {
+	public Tratta(Long id, String codice, String descrizione, Date data, LocalTime oraDecollo, LocalTime oraAtterraggio, Stato stato, Airbus airbus) {
 		this.id = id;
 		this.codice = codice;
 		this.descrizione = descrizione;
 		this.data = data;
 		this.oraDecollo = oraDecollo;
 		this.oraAtterraggio = oraAtterraggio;
-		this.minutiDurata = minutiDurata;
 		this.stato = stato;
 		this.airbus = airbus;
 	}
 
-	public Tratta(String codice, String descrizione, Date data, LocalTime oraDecollo, LocalTime oraAtterraggio,
-			Integer minutiDurata, Stato stato, Airbus airbus) {
+	public Tratta(String codice, String descrizione, Date data, LocalTime oraDecollo, LocalTime oraAtterraggio, Stato stato, Airbus airbus) {
 		this.codice = codice;
 		this.descrizione = descrizione;
 		this.data = data;
 		this.oraDecollo = oraDecollo;
 		this.oraAtterraggio = oraAtterraggio;
-		this.minutiDurata = minutiDurata;
 		this.stato = stato;
 		this.airbus = airbus;
 	}
 
-	public Tratta(Long id, String codice, String descrizione, Date data, LocalTime oraDecollo, LocalTime oraAtterraggio,
-			Integer minutiDurata, Stato stato) {
+	public Tratta(Long id, String codice, String descrizione, Date data, LocalTime oraDecollo, LocalTime oraAtterraggio, Stato stato) {
 		this.id = id;
 		this.codice = codice;
 		this.descrizione = descrizione;
 		this.data = data;
 		this.oraDecollo = oraDecollo;
 		this.oraAtterraggio = oraAtterraggio;
-		this.minutiDurata = minutiDurata;
 		this.stato = stato;
 	}
 
-	public Tratta(String codice, String descrizione, Date data, LocalTime oraDecollo, LocalTime oraAtterraggio,
-			Integer minutiDurata, Stato stato) {
+	public Tratta(String codice, String descrizione, Date data, LocalTime oraDecollo, LocalTime oraAtterraggio, Stato stato) {
 		this.codice = codice;
 		this.descrizione = descrizione;
 		this.data = data;
 		this.oraDecollo = oraDecollo;
 		this.oraAtterraggio = oraAtterraggio;
-		this.minutiDurata = minutiDurata;
 		this.stato = stato;
 	}
 
@@ -151,14 +140,6 @@ public class Tratta {
 
 	public void setOraAtterraggio(LocalTime oraAtterraggio) {
 		this.oraAtterraggio = oraAtterraggio;
-	}
-
-	public Integer getMinutiDurata() {
-		return minutiDurata;
-	}
-
-	public void setMinutiDurata(Integer minutiDurata) {
-		this.minutiDurata = minutiDurata;
 	}
 
 	public Stato getStato() {
